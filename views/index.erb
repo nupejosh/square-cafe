@@ -4,6 +4,8 @@
     <title>Square Cafe</title>
 
     <link rel="stylesheet" type="text/css" href="square.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+     <script src="square.js"></script>
   </head>
   <body>
     <div id="headmast">
@@ -26,7 +28,7 @@
 
 
         <form>
-          <div>
+          <div id = "selector">
             <!-- See this "drink[]" name? -->
             <!-- This is turned into an array of items -->
             <select name="drink[]">
@@ -51,18 +53,18 @@
             </select>
           </div>
 
-          <dl>
+          <dl id= "drink_num">
             <dt># of Drinks</dt>
             <dd id="drinks">0</dd>
 
-            <dt>Cost</dt>
+            <dt>Cost< bv/dt>
             <dd id="cost">$0.00</dd>
           </dl>
         </form>
       </div>
 
 
-      <div class="panel">
+     <!--  <div class="panel">
         <h2>Where We're At</h2>
         <iframe
           width="100%"
@@ -72,7 +74,7 @@
       </div>
 
     </div>
-
+ -->
     <div id="footer">
       Copyright &copy; 2013
     </div>
