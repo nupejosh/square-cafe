@@ -4,15 +4,20 @@
 
 $(document).ready(function(){
   $('form').on('change', 'select', function(){
-     $('form').append($("#selector").select().first().html());
-     $('#drinks').text($("select").length);
+    $('form').append($("#selector").select().first().html());
+    $('#drinks').text($("select").length-1);
 
-     $('#cost').text($('option').each(function (){
-        prices = 0 
-        if (data-price){
-          prices = prices + data-price
-        };
-        prices
-      }));
+    total_price = 0;
+    $('select').each(function()
+    {
+
+      if ($(this).find(":selected").attr("data-price"))
+      {
+        total_price = total_price + parseInt($(this).find(":selected").attr("data-price"))
+        $('#cost').text(total_price)
+      }
+    });
+
+
   })
 });
