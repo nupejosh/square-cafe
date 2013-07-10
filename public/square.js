@@ -17,7 +17,31 @@ $(document).ready(function(){
         $('#cost').text(total_price)
       }
     });
-
-
   })
 });
+
+ $(document).ready(function(){
+     $('input').click(function(event){
+        event.preventDefault();
+       $.post("/shop", $("form").serialize())  
+          .done(function(data){
+            alert(data);
+          })
+          .fail(function(){
+            alert("Sorry Suckers the server is down")
+          });                    
+  })
+});
+
+ // $(document).ready(function(){$.ajax({
+ //    url: "/shop",
+ //    type: "post",
+ //    dataType: "json",
+ //    success: function( json ) {
+ //        $( "<h1/>" ).text( json.title ).appendTo( "body" )},
+
+ //    error: function(xhr,status){
+ //      alert("Sorry our service is down SUCKERS!!");
+ //    }
+ // });
+// });

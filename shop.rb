@@ -9,4 +9,3 @@ end
 post '/shop' do
   'Thanks for your order'
 end
-
